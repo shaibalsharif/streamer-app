@@ -43,7 +43,11 @@ export default {
     fetchTV:{
         title:"TV",
         url:  `/discover/movie?api_key=${API_KEY}&with_genres=10770`,       
-    }
+    },
+    fetchSearched:{
+        title:"SEARCH",
+        url:`/search/movie?api_key=${API_KEY}&query=`
+    },
 };
 export  const  getbyid={
  url:`?api_key=${API_KEY}&language=en-US`,
