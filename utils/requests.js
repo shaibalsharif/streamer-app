@@ -48,6 +48,10 @@ export default {
         title:"SEARCH",
         url:`/search/movie?api_key=${API_KEY}&query=`
     },
+    fetchVideo:{
+        title:"SEARCH",
+        url: `?api_key=bf8b550b390c142b15bcbaa40e1ddfe8&append_to_response=videos`,
+    }
 };
 export  const  getbyid={
  url:`?api_key=${API_KEY}&language=en-US`,

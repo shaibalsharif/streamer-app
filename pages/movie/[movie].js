@@ -21,7 +21,7 @@ import MovieDetails from "../../components/MovieDetails";
 //const router = useRouter()
 const movie = ({ result }) => {
   const BASE_URL = "https://image.tmdb.org/t/p/original/"
-  console.log(result);
+ // console.log(result);
 
   return (
     <div >
