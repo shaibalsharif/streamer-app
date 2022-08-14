@@ -30,7 +30,10 @@ export async function getServerSideProps(context) {
   if (requests[genre] && requests[genre].title === 'SEARCH') {
     // fetchURL = `${baseURL}${requests[genre].url}`
     //fetchURL=fetchURL+"avaters"
-    fetchURL = `${baseURL}${requests[genre].url}${context.query.key}`
+    if(context.query.key){  
+      fetchURL = `${baseURL}${requests[genre].url}${context.query.key}`
+    }
+  
   }
 
 
