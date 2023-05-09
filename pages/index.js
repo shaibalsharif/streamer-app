@@ -14,6 +14,7 @@ export default function Home({ results,}) {
         <title>Streamer</title>
         <meta name="description" content="Movie Streamer Site" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel='manifest' href="/manifest.json"/>
       </Head>
 
       <Header />
