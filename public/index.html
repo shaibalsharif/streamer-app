@@ -2,9 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="icon" id="title-logo" href="./logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome to Firebase Hosting</title>
-
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Streamer app" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="./logo.png" />
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/9.9.0/firebase-app-compat.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -84,6 +89,24 @@
           loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
         }
       });
+    </script>
+     <script>
+      if ('serviceWorker' in navigator) {
+        // Register a service worker hosted at the root of the
+        // site using the default scope.
+        navigator.serviceWorker.register('/pwabuilder-sw.js').then(function (registration) {
+          console.log('Service worker registration succeeded:', registration);
+        }, /*catch*/ function (error) {
+          console.log('Service worker registration failed:', error);
+        });
+      } else {
+        console.log('Service workers are not supported.');
+      }
+    </script>
+    <script>
+      window.matchMedia(
+        '(display-mode: standalone)'
+      ).matches
     </script>
   </body>
 </html>
